@@ -1,0 +1,15 @@
+<h1>Welcome to Rock Paper Scissors!</h1>
+
+<p>To play this game, all you have to do is pick rock, paper or scissors. If you guess is the same as the computer, you win!</p>
+
+<p>Choose carefully... you only get one try!</p>
+
+<br/>
+
+<h2>Pick rock, paper or scissors:<h2>
+
+	<% array = ["rock","paper","scissors"]%>
+	<% (0..2).each do |number| %>
+	<% guess = array[number] %>
+  <%= link_to image_tag("rock_paper_scissors/#{guess}.jpeg"), rock_paper_scissor_path(number) %>
+	<% end %>

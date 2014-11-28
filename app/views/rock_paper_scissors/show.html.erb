@@ -1,0 +1,34 @@
+  <% array = ["rock","paper","scissors"] %>
+<% if @game_input == @user_input %>
+  <h1>IT'S A TIE!</h1>
+  <h4>Your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/tie.gif' %></p>
+ <% elsif @game_input == 2 && @user_input == 0 %>
+  <h1>CONGRATS! YOU WON!</h1>
+  <h4>Your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/cat-wins.gif' %></p>
+ <% elsif @game_input == 0 && @user_input == 1 %>
+  <h1>CONGRATS! YOU WON!</h1>
+  <h4>Your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/cat-wins.gif' %></p>
+  <% elsif @game_input == 1 && @user_input == 2 %>
+  <h1>CONGRATS! YOU WON!</h1>
+  <h4>Your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/cat-wins.gif' %></p>
+<% elsif @game_input == 1 && @user_input == 0 %>
+  <h1>Sorry, you lose...</h1>
+  <h4>your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/loser.gif' %></p>
+<% elsif @game_input == 2 && @user_input == 1 %>
+  <h1>Sorry, you lose...</h1>
+  <h4>your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/loser.gif' %></p>
+<% else %>
+  <h1>Sorry, you lose...</h1>
+  <h4>your opponent had <%=array[@game_input]%></h4>
+  <p><%= image_tag 'games/loser.gif' %></p>
+<% end %>
+
+<p>
+  <h3><%= link_to "PLAY AGAIN", new_rock_paper_scissor_path %></h3>
+</p>
